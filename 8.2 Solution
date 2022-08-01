@@ -45,3 +45,22 @@ hasCertainValue
           return v[key] === val
       })
   }
+  
+findUserByUsername
+  function findUserByUsername(arr, val)
+  {
+      return arr.find(function(v){
+          return v.username === val
+      })
+  }
+  
+removeUser  
+  function removeUser(arr, val)
+  {
+      let x = []
+      let temp = arr.findIndex(function(v){
+          return v.username === val
+      })
+      if(temp === -1) return;
+      return arr.splice(temp,1)
+  }
