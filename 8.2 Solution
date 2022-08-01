@@ -1,1 +1,47 @@
+hasOddNumber
+  function hasOddNumber(arr)
+  {
+      return arr.some(function(val){
+          return val % 2 === 1
+      })
+  }
 
+hasAZero
+function hasAZero(arr)
+{
+    return Array.from(arr.toString()).some(function(val){
+        return val === '0'
+    })
+}
+
+hasOnlyOddNumbers
+  function hasOnlyOddNumbers(arr)
+  {
+      return arr.every(function(val){
+          return val % 2 === 1
+      })
+  }
+
+hasNoDuplicates
+  function hasNoDuplicates(arr)
+  {
+      return !arr.every(function(val){
+          return arr.lastIndexOf(val) === arr.indexOf(val)
+      })
+  }
+
+hasCertainKey
+  function hasCertainKey(arr, key)
+  {
+      return arr.every(function(val){
+          return val[key] !== undefined
+      })
+  }
+  
+hasCertainValue
+  function hasCertainValue(arr, key, val)
+  {
+      return arr.every(function(v){
+          return v[key] === val
+      })
+  }
