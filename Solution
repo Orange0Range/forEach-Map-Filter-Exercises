@@ -1,0 +1,127 @@
+doubleValues
+  function doubleValues(arr){
+     return arr.map(function(val){
+         return val*2
+     })
+  }
+
+onlyEvenValues
+  function onlyEvenValues(arr){
+    return arr.filter(function(value){
+        return value % 2 === 0
+    })
+  }
+
+showFirstAndLast
+  function showFirstAndLast(arr){
+    return arr.map(function(value){
+        return value[0] + value[value.length -1 ]
+    })
+  }
+
+addKeyAndValue
+  function addKeyAndValue(arr, key, val){
+      arr.forEach(function(i){
+          i[key] = val;
+      })
+      return arr
+  }
+
+vowelCount
+  function vowelCount(words){
+      let a = 0;
+      let e = 0;
+      let i = 0;
+      let o = 0;
+      let u = 0;
+      let arr= {}
+      Array.from(words.toLowerCase()).forEach(function(x){
+          switch(x){
+              case 'a':
+                      a++;
+                      arr['a'] = a
+                      break;
+              case 'e':
+                      e++;
+                      arr['e'] = e
+                      break;
+              case 'i':
+                      i++;
+                      arr['i'] = i
+                      break;
+              case 'o':
+                      o++;
+                      arr['o'] = o
+                      break;
+              case 'u':
+                      u++;
+                      arr['u'] = u
+                      break;
+          }
+      })
+      return arr
+  }
+
+doubleValuesWithMap
+  function doubleValuesWithMap(arr){
+     return arr.map(function(val){
+         return val*2
+     })
+  }
+
+valTimesIndex
+  function valTimesIndex(arr){
+       return arr.map(function(val, i){
+           return val*i
+       })
+    }
+
+extractKey
+  function extractKey(arr, key){
+       return arr.map(function(val){
+           return val[key]
+       })
+    }
+
+extractFullName
+  function extractFullName(arr, key){
+       return arr.map(function(val){
+           return val.first + " " + val.last
+       })
+    }
+
+filterByValue
+  function filterByValue(arr, key){
+       return arr.filter(function(val){
+           return val[key] === true
+       })
+    }
+
+find
+  function find(arr, key){
+       return arr.find(val => val === key)
+  }
+
+
+findInObj
+function findInObj(arr, key, val){
+     return arr.find(v => v[key] === val)
+}
+
+removeVowels
+function removeVowels(text){
+    let vowels = 'aeiou'
+    let x = ''
+    Array.from(text.toLowerCase()).forEach(function(v){
+        if(!vowels.includes(v))
+            x+=v;
+    })
+    return x;
+}
+
+doubleOddNumbers
+function doubleOddNumbers(arr){
+   return arr.filter(v => v%2 === 1)
+                .map(v => v*2)
+}
+
