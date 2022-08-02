@@ -1,0 +1,53 @@
+extractValue
+  function extractValue(arr, key)
+  {
+      let x = arr.reduce(function(keyList, val){
+          keyList.push(val[key])
+          return keyList
+      },[])
+      return x
+  }
+ 
+vowelCount 
+  function vowelCount(arr, key)
+{
+    let vowels = 'aeiou'
+    let x = Array.from(arr.toLowerCase()).reduce(function(letList, letter){
+        if(vowels.indexOf(letter) !== -1){
+            if(letList[letter]){
+                letList[letter]++
+            }
+            else{
+                letList[letter] = 1
+            }
+        }
+        return letList
+    },{})
+    return x
+}
+
+addKeyAndValue
+  function addKeyAndValue(arr, key, val)
+  {
+      let x = arr.reduce(function(list, obj){
+          obj[key] = val
+          list.push(obj)
+          return list
+      },[])
+      return x
+  }
+  
+partition
+  function partition(arr, func)
+{
+    let x = arr.reduce(function(Arr, item){
+        if(func(item)){
+            Arr[0].push(item)
+        }else{
+            Arr[1].push(item)
+        }
+        return Arr
+    },[[],[]])
+    console.log(x)
+    return x
+}
