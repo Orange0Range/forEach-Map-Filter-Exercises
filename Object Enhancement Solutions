@@ -1,0 +1,36 @@
+function createInstructor(firstName, lastName){
+  return {
+    firstName,
+    lastName
+  }
+}
+
+var instructor = {
+  firstName: "Colt",
+  [favoriteNumber]: 'That is my favorite!'
+}
+
+
+var instructor = {
+  firstName: "Colt",
+  sayH(){
+    return "Hi!";
+  },
+  sayBye(){
+    return this.firstName + " says bye!";
+  }
+}
+
+const d = createAnimal("dog", "bark", "Woooof!")
+// {species: "dog", bark: ƒ}
+d.bark()  //"Woooof!"
+
+const s = createAnimal("sheep", "bleet", "BAAAAaaaa")
+// {species: "sheep", bleet: ƒ}
+s.bleet() //"BAAAAaaaa"
+
+function createAnimal(species, action, func){
+return {species,
+[action](){
+return func
+}}}
